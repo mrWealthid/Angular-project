@@ -1,0 +1,84 @@
+<h1>
+    USING MODEL DRIVEN-REACTIVE FORMS
+</h1>
+<hr>
+<div class="col-md-4">
+
+
+    <form [formGroup]="profileForm" autocomplete="off" novalidate (ngSubmit)="handleUpdateUser(profileForm.value)">
+
+        <div class="form-group">
+            <label for="userName">First Name</label>
+
+            <input name="firstName" formControlName="firstName" id="firstName" type="text" class="form-control"
+                placeholder="First Name..." />
+        </div>
+        <div class="form-group">
+            <label for="password">Last Name</label>
+
+            <input name="lastName" formControlName="lastName" id="lastName" type="text" class="form-control"
+                placeholder="Last Name..." />
+        </div>
+        <span>
+
+
+            <button type="submit" class="btn btn-primary">Update</button>
+        </span>
+        <button (click)="cancel()" type="button" class="btn btn-default">Cancel</button>
+    </form>
+</div>
+
+
+<!-- <div class="col-md-3">
+    <h3>USER Name</h3>
+
+    <p> loginForm.controls.userName.valid: {{loginForm.controls['userName']?.valid}}</p>
+    <br />
+    loginForm.controls.userName.invalid: {{loginForm.controls['userName']?.invalid}}
+    <br>
+    loginForm.controls.userName.dirty: {{loginForm.controls['userName']?.dirty}}
+    <br>
+    loginForm.controls.userName.pristine: {{loginForm.controls['userName']?.pristine}}
+    <br>
+    loginForm.controls.userName.touched: {{loginForm.controls['userName']?.touched}}
+    <br>
+    loginForm.controls.userName.untouched: {{loginForm.controls['userName']?.untouched}}
+    <br>
+</div> -->
+
+
+
+<!-- <div class="col-md-3">
+    <h3>Password</h3>
+
+    loginForm.controls.password.valid: {{loginForm.controls['password']?.valid}}
+    <br />
+    loginForm.controls.password.invalid: {{loginForm.controls['password']?.invalid}}
+    <br>
+    loginForm.controls.password.dirty: {{loginForm.controls['password']?.dirty}}
+    <br>
+    loginForm.controls.password.pristine: {{loginForm.controls['password']?.pristine}}
+    <br>
+    loginForm.controls.password.touched: {{loginForm.controls['password']?.touched}}
+    <br>
+    loginForm.controls.password.untouched: {{loginForm.controls['password']?.untouched}}
+    <br>
+</div> -->
+
+
+<!-- <div class="col-md-3">
+    <h3>Login Form</h3>
+
+    LoginForm.valid: {{loginForm.valid}}
+    <br />
+    LoginForm.invalid: {{loginForm.invalid}}
+    <br />
+    LoginForm.dirty: {{loginForm.dirty}}
+    <br />
+    LoginForm.pristine: {{loginForm.pristine}}
+    <br />
+    LoginForm.touched: {{loginForm.touched}}
+    <br />
+    LoginForm.untouched: {{loginForm.untouched}}
+    <br />
+</div> -->

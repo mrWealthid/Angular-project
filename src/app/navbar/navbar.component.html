@@ -1,0 +1,31 @@
+<nav class=""
+    style="display: flex; justify-content:space-between; padding: 20px 15px; background: goldenrod; color: black;">
+    <div>
+        Navbar
+    </div>
+
+    <section style="display: flex; gap: 30px;">
+        <div [routerLink]="['']">
+            Home
+        </div>
+
+        <div [routerLink]="['login']" *ngIf="!authService.isAuthenticated()">
+            Login
+        </div>
+
+
+        <div [routerLink]="['profile']" *ngIf="authService.isAuthenticated()">
+            Profile
+        </div>
+
+        <div *ngIf="authService.isAuthenticated()">
+            {{authService.currentUser.lastName}}
+        </div>
+
+
+        <div (click)="authService.logoutUser()" *ngIf="authService.isAuthenticated()">
+            Logout
+        </div>
+    </section>
+
+</nav>
