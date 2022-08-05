@@ -1,0 +1,18 @@
+<form *ngIf="showAddTask" #taskForm="ngForm" class="mt-2" (submit)="handleSubmit(taskForm.value)">
+    <div class="mb-3 ">
+        <label for="title" class="form-label">Task Title</label>
+        <input (ngModel)="title" name="title" type="text" class="form-control" id="title">
+        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input (ngModel)="description" name="description" type="text" class="form-control" id="description">
+    </div>
+    <div class="mb-3 form-check">
+        <input [ngModel]="true" type="checkbox" name="reminder" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div class="">
+        <button type="submit" class="btn w-100 btn-primary">Submit</button>
+    </div>
+</form>

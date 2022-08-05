@@ -25,4 +25,33 @@ export class LoginComponent {
   reset(val: any) {
     val.reset();
   }
+
+  showSpeed() {
+    return speed;
+  }
+  addSpeed() {
+    //  speed[0]= speed.map((item) => {
+    //     return { ...item, id: item.id * 2 };
+    //   });
+    //   this.showSpeed();
+    speed[0] = {
+      id: 40,
+      name: 'wealthsss',
+    };
+  }
+  subSpeed() {
+    return speed.map((item) => item.id - 5);
+  }
 }
+
+const speed = [
+  {
+    id: 2,
+    name: 'wealth',
+  },
+
+  {
+    id: 4,
+    name: 'wealthy',
+  },
+];

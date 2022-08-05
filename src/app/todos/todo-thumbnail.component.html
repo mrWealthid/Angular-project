@@ -1,0 +1,28 @@
+<!-- [class.border-bottom]="!last" -->
+
+<section style="background: #E5E5E5;" class=" mb-1 p-2" (dblclick)="handleToggle(todo)"
+    [ngClass]="{'section_border': todo.reminder}">
+    <div class="d-flex justify-content-between ">
+        <p class="">
+            {{todo.title}}
+        </p>
+        <span (click)="handleDelete($event,todo.id)">
+            <fa-icon [ngStyle]="{'color':'black'}" [icon]="faTrash"></fa-icon>
+        </span>
+
+        <!-- <span>
+            <fa-icon [icon]="faEdit"></fa-icon>
+        </span> -->
+    </div>
+
+    <div>
+        <small>
+            {{todo.description}}
+        </small>
+    </div>
+
+    <section>
+
+    </section>
+
+</section>
