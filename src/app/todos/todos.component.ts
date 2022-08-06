@@ -16,10 +16,10 @@ export class TodosComponent implements OnInit {
   constructor(private todoService: TodoserviceService) {}
 
   ngOnInit(): void {
-    // this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
+    this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
 
     //using async pipe--A better way
-    this.todos$ = this.todoService.getTodos();
+    // this.todos$ = this.todoService.getTodos();
   }
   handleToggleView(val: string) {
     this.toggleView = !this.toggleView;

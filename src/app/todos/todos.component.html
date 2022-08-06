@@ -11,10 +11,25 @@
   <!-- </div>
         </section> -->
 
-  <section class="mt-2" *ngIf="todos$ | async as todoos">
+  <!-- 
+
+         <section class="mt-2" *ngIf="todos$ | async as todoos">
     <todo-thubmnail
       [toggle]="toggleView"
       *ngFor="let todo of todoos; last as Islast"
+      [last]="Islast"
+      [todo]="todo"
+      (onDelete)="handleDelete($event)"
+      (onToggle)="handleToggle($event)"
+    >
+    </todo-thubmnail>
+  </section>
+</section> -->
+
+  <section class="mt-2">
+    <todo-thubmnail
+      [toggle]="toggleView"
+      *ngFor="let todo of todos; last as Islast"
       [last]="Islast"
       [todo]="todo"
       (onDelete)="handleDelete($event)"
